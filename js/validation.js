@@ -120,19 +120,9 @@ $(document).ready(function(){
             }
         }      
     });
-    var radioCheck=false;
     
     function checkForm(){
-        if((document.getElementById("paypalPayment").checked)){
-            radioCheck=true;
-        }
-        else if((document.getElementById("cardPayment").checked)){
-            if((cardNumb=="")||(cardDate=="")||(cvv==""))
-                radioCheck=false;
-            else
-                radioCheck=true;
-        }
-        if((($("#agreement").is(':checked'))&&(counter==0))&&(radioCheck))
+        if((($("#agreement").is(':checked'))&&(counter==0))&&((document.getElementById("paypalPayment").checked)||(document.getElementById("cardPayment").checked)))
         {
             $('#SubmitButton').removeAttr('disabled');
         }

@@ -89,12 +89,14 @@ function generate(){
         card.setAttribute("type","radio");
         card.setAttribute("name","payment");
         card.setAttribute("id","cardPayment");
+        
 
     var CVV = document.createElement("input");
         CVV.setAttribute("type", "text");
         CVV.setAttribute("name", "CVV");
         CVV.setAttribute("placeholder", "CVV");
         CVV.setAttribute("id", "CVV");
+        CVV.setAttribute("required","required");
 
     var check = document.createElement("input")
         check.setAttribute("type","checkbox");
@@ -119,6 +121,7 @@ function generate(){
         cardNum.setAttribute("name", "cardNumber");
         cardNum.setAttribute("placeholder", "Card Number");
         cardNum.setAttribute("id", "cardNumber");
+        cardNum.setAttribute("required","required");
         
     
     var cardDate = document.createElement("input");
@@ -126,6 +129,7 @@ function generate(){
         cardDate.setAttribute("name", "cardD");
         cardDate.setAttribute("placeholder", "Expiry Date");
         cardDate.setAttribute("id", "cardDate");
+        cardDate.setAttribute("required","required");
 
     var s = document.createElement("input");
         s.setAttribute("type", "submit");
