@@ -74,9 +74,9 @@ $(document).ready(function(){
     });
 
     $("#cardDate").blur(function(){
-        var cardNumb = document.getElementById('cardDate').value;
-        const mailValid = /^(0[1-9]|1[0-2])\/([0-9]{4}|[0-9]{2})$/;
-        if(!(mailValid.test(cardNumb))){
+        var cardDate = document.getElementById('cardDate').value;
+        const dateValid = /^(0[1-9]|1[0-2])\/([0-9]{4}|[0-9]{2})$/;
+        if(!(dateValid.test(cardDate))){
             $("#dateError").text("Invalid card date");
             counter++;
             $('#SubmitButton').attr('disabled','disabled');
@@ -90,9 +90,9 @@ $(document).ready(function(){
     });
 
     $("#CVV").blur(function(){
-        var cardNumb = document.getElementById('CVV').value;
-        const mailValid = /^[0-9]{3}$/;
-        if(!(mailValid.test(cardNumb))){
+        var cvv = document.getElementById('CVV').value;
+        const cvvValid = /^[0-9]{3}$/;
+        if(!(cvvValid.test(cvv))){
             $("#CVVError").text("Invalid card CVV");
             counter++;
             $('#SubmitButton').attr('disabled','disabled');
@@ -120,9 +120,19 @@ $(document).ready(function(){
             }
         }      
     });
+    var radioCheck=false;
     
     function checkForm(){
-        if((($("#agreement").is(':checked'))&&(counter==0))&&((document.getElementById("paypalPayment").checked)||(document.getElementById("cardPayment").checked)))
+        if((document.getElementById("paypalPayment").checked)){
+            radioCheck=true;
+        }
+        else if((document.getElementById("cardPayment").checked)){
+            if((cardNumb=="")||(cardDate=="")||(cvv==""))
+                radioCheck=false;
+            else
+                radioCheck=true;
+        }
+        if((($("#agreement").is(':checked'))&&(counter==0))&&(radioCheck))
         {
             $('#SubmitButton').removeAttr('disabled');
         }
