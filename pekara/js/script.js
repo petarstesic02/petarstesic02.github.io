@@ -342,6 +342,7 @@ function showKorpa(){
             let div=document.getElementById("cart");
             let proizvodTrenutni=[];
             var k=0;
+            var ukupnaCena=0;
             ispis+=`<div class="table-responsive table">`;
             if(proizvodi){
                 let proizvodiSvi=getFromLocalStorage('proizvod');
@@ -373,10 +374,16 @@ function showKorpa(){
                                     <td>${Number(proizvodTrenutni[i].cenaPopust?proizvodTrenutni[i].cenaPopust*proizvodi[i].quantity:proizvodTrenutni[i].cena*proizvodi[i].quantity)}</td>
                                     <td><input type="button" class="btn btn-dark obrisi" value="OBRISI PROIZVOD IZ KORPE" data-id="${proizvodTrenutni[i].id}"/></td>
                                 </tr>`;
+                        ukupnaCena+=Number(proizvodTrenutni[i].cenaPopust?proizvodTrenutni[i].cenaPopust*proizvodi[i].quantity:proizvodTrenutni[i].cena*proizvodi[i].quantity);
+                        console.log(ukupnaCena);
                         }
                     }
                 }
                 ispis+=`</tbody></table></div>`;
+                ispis+=`<div class="row text-center align-items-center">
+                            <p class="card-text">UKUPNA CENA: ${ukupnaCena}</p>
+                            <button class="btn btn-warning"><b>PLATI</b></button>
+                        </div>`;
             }
             else{
                 ispis=`<div class="row text-center"><h3 class="display-3">NEMA PROIZVODA U KORPI</h3></div>`;
