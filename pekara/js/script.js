@@ -1,8 +1,8 @@
 //Ajax funkcija za dohvatanje json fajlova - reusable
 function getData(file,selektor,funkcija){
     $.ajax({
-        url:"../json/"+file+".json",
-        method:"get",
+        url:"json/"+file+".json",
+        method:"post",
         dataType:"json",
         success:funkcija,
         error:function(xhr){
