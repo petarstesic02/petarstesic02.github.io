@@ -59,6 +59,7 @@ if(daLiHome||daLiShop){
         data=filterCategories(data);
         data=sortByPrice(data);
         data=filterPosno(data);
+        data=searchFilter(data);
 
         data.forEach(x=>{
             ispis+=`<div class="col-lg-6 mb-12" id="${x.slika.alt}">
@@ -164,6 +165,18 @@ function filterPosno(data){
     }
 }
 
+//search bar filter
+function searchFilter(data){
+    if(daLiShop){
+        let pretraga=$('#searchInput').val().toLowerCase();
+        if(pretraga!=""){
+            return data.filter(x=>x.ime.toLowerCase().includes(pretraga));
+        }
+        return data;
+    }
+    return data;
+}
+
 //funkcije za promenu filtera
 $('#sortDiv').change(function(){
     filterChange();
@@ -178,6 +191,12 @@ function sortByPrice(data){
         const typeOfSort=document.getElementById('inputGroupSelect').value;
         if(typeOfSort=='asc'){
             return data.sort((x,y)=>x.cenaPopust>y.cenaPopust?1:-1);
+        }
+        else if(typeOfSort=='az'){
+            return data.sort((x,y)=>x.ime>y.ime?1:-1);
+        }
+        else if(typeOfSort=='za'){
+            return data.sort((x,y)=>x.ime<y.ime?1:-1);
         }
         return data.sort((x,y)=>x.cenaPopust<y.cenaPopust?1:-1);
     }

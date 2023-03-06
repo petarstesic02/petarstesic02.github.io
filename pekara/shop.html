@@ -43,27 +43,14 @@
               </div>
             </div>
           </nav>
-          <div id="shopHead" class="row">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/carousel1.jpg" class="d-block w-100" alt="Carousel image 1" />
-                </div>
-                <div class="carousel-item">
-                  <img src="img/carousel2.jpg" class="d-block w-100" alt="Carousel image 2" />
-                </div>
-                <div class="carousel-item">
-                  <img src="img/carousel3.jpg" class="d-block w-100" alt="Carousel image 3" />
+          <div class="mastheadContact">
+            <div class="container h-100">
+              <div class="row h-100 align-items-center">
+                <div class="col-12 text-center headerText">
+                  <h1 class="display-1">PEKARA ILIĆ</h1>
+                  <p class="lead">SHOP STRANICA</p>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
           </div>
           <div class="row text-center align-items-center" id="proizv">
@@ -78,9 +65,15 @@
               <label class="input-group-text" for="inputGroupSelect">Sortiraj po:</label>
             </div>
             <select class="form-select" id="inputGroupSelect">
+              <option value="az">Imenima[A-Z]</option>
+              <option value="za" selected>Imenima[Z-A]</option>
               <option value="asc">Ceni rastuće</option>
               <option value="desc" selected>Ceni opadajuće</option>
             </select>
+            <div class="input-group" id="search">
+              <input type="search" id="searchInput" class="form-control rounded" placeholder="Unesi ime proizvoda" aria-label="Search" aria-describedby="search-addon" />
+              <button type="button" class="btn btn-warning">PRETRAGA</button>
+            </div>
           </div>
         </div>
         <div class="col-md-8">
