@@ -1,0 +1,215 @@
+nav{
+    background-color:#7D6636;
+}
+.masthead {
+    height: 600px;
+    min-height: 200px;
+    background-image: url('../img/header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: 10px solid #C9A557;
+}
+.mastheadContact {
+    height: 600px;
+    min-height: 200px;
+    background-image: url('../img/headerContact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: 10px solid #C9A557;
+}
+footer p{
+    font-size:20px;
+    padding:20px;
+    margin:0px auto;
+}
+h1{
+    border-bottom: 1px solid black;
+}
+.bold{
+    font-weight: bold;
+}
+.headerText{
+    backdrop-filter: blur(2px);
+    background: rgba(247, 202, 107, 0.4);
+    padding: 100px 0px;
+}
+.headerText p{
+    font-size:30px;
+}
+main{
+    min-height:400px;
+}
+#main{
+    background-color:white;
+    margin-top:40px;
+}
+h2{
+    padding:20px 0px;
+}
+.navbar-nav li a:hover{
+    background-color:#C9A557;
+    color:black;
+}
+#story{
+    font-size:20px;
+    color:black;
+    background:rgba(204, 204, 204, 0.5);
+    padding:10px;
+}
+h3{
+    padding:10px 0px;
+}
+#kreni,#proizv{
+    background: -webkit-linear-gradient(45deg, rgba(104,79,64,0.9) 0%,rgba(253,184,34,0.9) 100%);
+    background: linear-gradient(45deg, rgba(104,79,64,0.9) 0%,rgba(253,184,34,0.9) 100%);
+    min-height:100px;
+    padding:20px;
+}
+#kreni{
+    margin-top:100px;
+}
+#proizv div:first-of-type{
+    color:white;
+    font-weight: bold;
+    font-size:40px;
+    margin-bottom:10px;
+}
+#kreni div:first-of-type{
+    color:white;
+    font-weight: bold;
+    font-size:20px;
+    margin-bottom:10px;
+}
+#kreni div a{
+    font-size:20px;
+}
+#shopper{
+    padding:60px;
+}
+.product{
+    margin-bottom:30px;
+}
+.categoryCb,.posnoCb{
+    margin-right:10px;
+}
+#sortDiv{
+    padding:60px 40px;
+}
+#filterSort{
+    background-color: rgba(253,184,34,0.9);
+}
+.form-outline{
+    margin-bottom:20px;
+}
+#post{
+    margin-top:20px;
+}
+footer{
+    background: -webkit-linear-gradient(45deg, rgba(104,79,64,0.9) 0%,rgba(253,184,34,0.9) 100%);
+    background: linear-gradient(45deg, rgba(104,79,64,0.9) 0%,rgba(253,184,34,0.9) 100%);
+}
+#carousel{
+    padding:80px;
+}
+#shopHead{
+    background-color: #D2C09A;
+    padding:40px;
+    border-top: 10px solid #C9A557;
+}
+nav{
+    width:100%;
+}
+main form{
+    border-top: 5px solid #D9B25D;
+    border-right: 5px solid #D9B25D;
+    border-left: 5px solid #524323;
+    border-bottom: 5px solid #524323;
+    margin:80px auto;
+    background-color: #D2C09A;
+    padding:50px;
+}
+#contactFooter{
+    border-top: 10px solid #D9B25D;
+}
+#contactHead{
+    border-bottom: 10px solid #D9B25D;
+}
+form button{
+    background-color:#C9A557;
+    border-radius: 5px;
+    width:100px;
+    height:35px;
+    border:none;
+    font-weight: bold;
+    color:white;
+}
+form button:hover{
+    background-color:#7D6636;
+}
+#autorMain{
+    padding:60px;
+}
+#autorImg{
+    background-image: url('../img/autor.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height:100%;
+}
+#autorCard{
+    height:1000px;
+}
+#textAreaForm{
+    resize: none;
+    overflow-y: scroll;
+    height:100px;
+}
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+  .footerTxt{
+    background-color: rgba(0, 0, 0, 0.2);
+  }

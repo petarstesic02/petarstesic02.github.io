@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <title>Pekara Ilić | Kontakt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Petar Stešić"/>
+    <meta name="description" content="Ovo je kontakt stranica mog sajta za pekaru"/>
+    <meta name="keywords" content="kontakt,pitanje"/>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <header id="contactHead">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Pekara Ilić</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Početna</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="shop.html">Kupovina</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="contact.html">Kontakt</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="author.html">Autor</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="cart.html">Korpa<span id="brojKorpa"></span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="mastheadContact">
+            <div class="container h-100">
+              <div class="row h-100 align-items-center">
+                <div class="col-12 text-center headerText">
+                  <h1 class="display-1">PEKARA ILIĆ</h1>
+                  <p class="lead">KONTAKT STRANICA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row text-center align-items-center" id="proizv">
+            <div class="col-md-12 text-center">KONKTAKTIRAJTE NAS</div>
+          </div>
+    </header>
+    <main id="formMain">
+        <form id="kontaktForma"onsubmit="return validateForm()" class="container" action="contact.php" method="post">
+            <div class="mb-3">
+              <label for="emailInput" class="form-label" id="emailLabel" name="labelEmail">EMAIL</label>
+              <input type="email" class="form-control" id="emailInput" name="email" aria-describedby="emailHelp" placeholder="email@example.com" required />
+              <div id="emailHelp" class="form-text">Nikada ne delimo vašu e-mail adresu ni sa kim.</div>
+            </div>
+            <div class="mb-3">
+              <label for="textAreaForm" class="form-label" id="questionLabel" name="labelQuestion">VAŠE PITANJE</label>
+              <textarea class="form-control" id="textAreaForm" name="question" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label id="ocenaLabel" for="rateSelect" class="form-label" name="labelSelect">OCENITE NAŠE USLUGE</label>
+                <select class="form-control" id="rateSelect">
+                    <option value="0">Izaberite ocenu...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+              </div>
+            <div class="mb-3 form-check">
+              <input name="cbUpdates" type="checkbox" class="form-check-input" id="cbForm"/>
+              <label class="form-check-label" for="cbForm" name="labelCb">Želim da dobijam novosti o proizvodima i popustima na e-mail.</label>
+            </div>
+            <div class="popup">
+              <span id="popupForma" class="popuptext">Proizvod je dodat u korpu.</span>
+              <button id="btnSubmit" name="submitBtn" value="submit" type="submit">SUBMIT</button>
+            </div>
+          </form>
+    </main>
+    <div>
+      <footer class="text-center text-lg-start">
+        <div class="container d-flex justify-content-center py-5">
+          <a class="btn btn-warning btn-lg btn-floating mx-2" href="https://www.facebook.com">
+            <i class="fa fa-facebook-f"></i>
+          </a>
+          <a class="btn btn-warning btn-lg btn-floating mx-2" href="https://www.instagram.com">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a class="btn btn-warning btn-lg btn-floating mx-2" href="https://www.twitter.com">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </div>
+    
+        <div class="text-center text-white p-3 footerTxt">
+          &copy; 2023 Pekara Ilić
+          <a class="text-white" href="pekarailic@gmail.com">pekarailic&#64;gmail&#46;com</a>
+        </div>
+      </footer>   
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>

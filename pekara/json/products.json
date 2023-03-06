@@ -1,0 +1,92 @@
+[
+    {
+        "id":1,
+        "ime": "Kifla sa sirom",
+        "slika": {
+            "src":"kiflaSir.jpg",
+            "alt":"KiflaSaSirom"
+        },
+        "cena": 100,
+        "cenaPopust": 80,
+        "posno": false,
+        "kategorije": [
+            1,2,3
+        ],
+        "opis": "Kifla sa domaćim sirom od kravljeg mleka",
+        "specijal":true
+    },
+    {
+        "id":2,
+        "ime": "Burek sa sirom",
+        "slika": {
+            "src":"burekSir.jpg",
+            "alt":"BurekSaSirom"
+        },
+        "cena": 150,
+        "cenaPopust": 130,
+        "posno": false,
+        "kategorije": [
+            1,2,4
+        ],
+        "opis": "Burek sa domaćim kravljim sirom",
+        "specijal":false
+    },
+    {
+        "id":3,
+        "ime": "Burek sa mesom",
+        "slika": {
+            "src":"burekMeso.webp",
+            "alt":"BurekSaMesom"
+        },
+        "cena": 160,
+        "cenaPopust": 140,
+        "posno": false,
+        "kategorije": [
+            1,4,7
+        ],
+        "opis": "Burek sa svinjskim mesom",
+        "specijal":true
+    },
+    {
+        "id":4,
+        "ime":"Kifla sa kremom",
+        "slika":{
+            "src":"kiflaKrem.jpg",
+            "alt":"KiflaSaKremom"
+        },
+        "cena":90,
+        "cenaPopust":80,
+        "posno":false,
+        "kategorije":[2,3,6,8],
+        "opis":"Kifla sa kakao kremom",
+        "specijal":false
+    },
+    {
+        "id":5,
+        "ime":"Pita sa jabukama",
+        "slika":{
+            "src":"pitaJabuka.jpg",
+            "alt":"PitaSaJabukama"
+        },
+        "cena":100,
+        "cenaPopust":95,
+        "posno":true,
+        "kategorije":[5,8,9],
+        "opis":"Pita sa jabukama",
+        "specijal":false
+    },
+    {
+        "id":6,
+        "ime":"Pita sa visnjama",
+        "slika":{
+            "src":"pitaVisnja.webp",
+            "alt":"pitaSaVisnjama"
+        },
+        "cena":100,
+        "cenaPopust":90,
+        "posno":true,
+        "kategorije":[5,8,9],
+        "opis":"Pita sa visnjama",
+        "specijal":false
+    }
+]
