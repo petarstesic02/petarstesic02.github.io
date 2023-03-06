@@ -2,7 +2,7 @@
 function getData(file,selektor,funkcija){
     $.ajax({
         url:"json/"+file+".json",
-        method:"post",
+        method:"get",
         dataType:"json",
         success:funkcija,
         error:function(xhr){
