@@ -6,7 +6,7 @@ function getData(file,selektor,funkcija){
         dataType:"json",
         success:funkcija,
         error:function(xhr){
-           alert(xhr.responseText);
+           console.log(xhr.responseText);
         }
     });
 }
