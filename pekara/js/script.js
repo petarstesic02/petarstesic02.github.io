@@ -343,11 +343,11 @@ function showKorpa(){
             let proizvodTrenutni=[];
             var k=0;
             var ukupnaCena=0;
-            ispis+=`<div class="table-responsive table table-striped">`;
+            ispis+=`<div class="table-responsive table">`;
             if(proizvodi){
                 let proizvodiSvi=getFromLocalStorage('proizvod');
                 //console.log(proizvodi);
-                ispis+=`<table class="table">
+                ispis+=`<table class="table table-striped">
                             <thead>
                                 <tr>
                                     <th scope="col">ID</th>
